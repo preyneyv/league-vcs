@@ -1,5 +1,5 @@
-import sys
 import json
+import sys
 
 from league_vcs.exceptions import UserInputException
 

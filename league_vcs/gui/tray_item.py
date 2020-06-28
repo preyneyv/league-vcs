@@ -4,14 +4,6 @@ import wx
 import wx.adv
 
 
-#
-# class TrayIcon(wx.adv.TaskBarIcon):
-#     def __init__(self):
-#         super(TrayIcon, self).__init__()
-#         icon = wx.Icon(wx.Bitmap(r"C:/Users/prana/Downloads/black-small-square-geometric-37940.bmp"))
-#         self.SetIcon(icon, 'wow Cooltip')
-#
-
 def create_menu_item(menu, label, func=None):
     item = wx.MenuItem(menu, -1, label)
     if func is None:
@@ -32,7 +24,6 @@ class TrayItem(wx.adv.TaskBarIcon):
 
         self.menu_options = menu_options
         self.on_left_click = on_left_click
-        # self.on_exit_callback = on_exit_callback
 
         self.Bind(wx.adv.EVT_TASKBAR_LEFT_DOWN, self.on_left_down)
 
@@ -49,9 +40,6 @@ class TrayItem(wx.adv.TaskBarIcon):
                 label, func = item
                 create_menu_item(menu, label, func)
 
-        # menu.AppendSeparator()
-        # create_menu_item(menu, 'Exit', self.on_exit)
-
         return menu
 
     def set_icon(self):
@@ -63,11 +51,3 @@ class TrayItem(wx.adv.TaskBarIcon):
         if self.on_left_click is False:
             return
         self.menu_options[self.on_left_click][1]()
-
-    # def on_hello(self, event):
-    #     print('Hello, world!')
-
-    # def on_exit(self, event):
-    #     if self.on_exit_callback:
-    #         self.on_exit_callback()
-        # self.myapp_frame.Close()

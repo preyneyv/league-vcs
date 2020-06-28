@@ -327,9 +327,9 @@ class AboutTab(Tab):
            In practice, this ends up saving a lot of storage space while still allowing you to rapidly jump
            back in time to any previous version.</p>
         <p>If you are interested in more details, you can check out the source code on
-           <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>GitHub</a> to figure out how exactly I'm doing
+           <a href='https://github.com/preyneyv/league-vcs/'>GitHub</a> to figure out how exactly I'm doing
            this.</p>
-        <p>Long story short, this project is a consequence of the global health crisis.</p>"""
+        """
         window.SetPage(text)
         sizer.Add(window, 1, wx.EXPAND)
         self.SetSizer(sizer)

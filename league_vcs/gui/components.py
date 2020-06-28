@@ -9,7 +9,7 @@ def make_header_container(parent):
 
     logo_img = wx.Image(icon('icon.png'), wx.BITMAP_TYPE_PNG).Scale(64, 64)
     logo = wx.StaticBitmap(parent, bitmap=logo_img.ConvertToBitmap())
-    header_container.Add(logo, 0, wx.RIGHT, border=20)
+    header_container.Add(logo, 0, wx.RIGHT, border=10)
 
     title = wx.BoxSizer(wx.VERTICAL)
     title_1 = wx.StaticText(parent, label='Unofficial*')

@@ -1,5 +1,5 @@
-from win32event import CreateMutex
 from win32api import CloseHandle, GetLastError
+from win32event import CreateMutex
 from winerror import ERROR_ALREADY_EXISTS
 
 
