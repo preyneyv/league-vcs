@@ -47,11 +47,15 @@ config = Config(config_path)
 print('Loaded config', config)
 
 if __name__ == '__main__':
-    singleton = Singleton()
-    if singleton.should_close():
-        # There's already another instance running.
-        print('There is another already-running instance. Exiting now.')
-        sys.exit(1)
+    if len(sys.argv) == 1:
+        gui = GUI(config)
+        singleton = Singleton()
+        if singleton.should_close():
+            # There's already another instance running.
+            print('There is another already-running instance. Exiting now.')
+            sys.exit(1)
 
-    gui = GUI(config)
-    gui.start()
+        gui.start()
+    else:
+        gui = GUI(config)
+        gui.watch(sys.argv[1])

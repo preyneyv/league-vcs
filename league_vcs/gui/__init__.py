@@ -53,6 +53,19 @@ class GUI:
             frame.Show()
         self.app.MainLoop()
 
+    def watch(self, replay):
+        """
+        This is an alternative entrypoint to GUI.start(), which doesn't start a daemon or anything, but just loads the
+        replay and exits.
+        """
+        if not self.config['configured']:
+            wx.MessageBox('Please first launch the application directly to complete configuration!', 'Error',
+                          style=wx.ICON_ERROR)
+            sys.exit(1)
+
+        WatchReplayFrame(replay, self.config['repository'])
+        self.app.MainLoop()
+
     def start_daemon(self):
         self.install_startup()
         self.set_low_priority()
@@ -68,7 +81,7 @@ class GUI:
         startup_path = shell.SpecialFolders('Startup')
         path = os.path.join(startup_path, 'League VCS.lnk')
         if os.path.exists(path):
-            return  # it's already there.
+            os.unlink(path)
         target = sys.executable
         wDir = os.path.dirname(target)
         icn = sys.executable
