@@ -1,6 +1,5 @@
 # League VCS
 
-
 - [Download League VCS](https://github.com/preyneyv/league-vcs/releases)
 - [Wiki Home](https://github.com/preyneyv/league-vcs/wiki)
   - [Installation](https://github.com/preyneyv/league-vcs/wiki/Installation)
@@ -13,9 +12,20 @@
 ![Main Screenshot](https://github.com/preyneyv/league-vcs/raw/master/images/patch-list.png)
 
 
-League VCS offers an easy solution to the ever-frustrating problem of the League of Legends Replay system.
+**NOTE:** Currently in beta, prone to spontaneous explosions. Do not use for any production-level projects. It *should*
+work but that doesn't mean it *will*.
 
-Check the [Wiki](https://github.com/preyneyv/league-vcs/wiki) for more details on why, installation instructions and usage documentation.
+### Features
+
+- Easy-to-use replay watching from any previous League of Legends patch.
+  - Detects the patch version from the `.rofl` file. 
+- Automatic store backups of old League of Legends versions.
+  - Only stores the changed files to make better use of limited storage.
+
+### Supported Platforms
+League VCS only supports 64-bit Windows, and I don't have any plans to add 32-bit Windows or macOS support.
+
+Check out the [Wiki](https://github.com/preyneyv/league-vcs/wiki) for setup and usage instructions.
 
 ---
 
