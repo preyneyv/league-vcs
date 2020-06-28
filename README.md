@@ -9,6 +9,7 @@
 
 
 *A version control system for League of Legends.*
+
 ![Main Screenshot](https://github.com/preyneyv/league-vcs/raw/master/images/patch-list.png)
 
 
