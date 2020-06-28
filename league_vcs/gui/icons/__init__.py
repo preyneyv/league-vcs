@@ -1,0 +1,5 @@
+import os
+
+
+def icon(name):
+    return os.path.abspath(os.path.join(os.path.dirname(__file__), name))

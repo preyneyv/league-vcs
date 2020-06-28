@@ -1,6 +1,8 @@
 import sys
 import json
 
+from league_vcs.exceptions import UserInputException
+
 
 class ROFLParser:
     """
@@ -16,8 +18,13 @@ class ROFLParser:
 
     def __init__(self, path):
         self.file = open(path, 'rb')
-        self.length_fields = self.extract_length_fields()
-        self.metadata = self.extract_metadata()
+        try:
+            self.length_fields = self.extract_length_fields()
+            self.metadata = self.extract_metadata()
+            self.version = self.metadata['gameVersion']
+        except BaseException:
+            raise UserInputException(f'Invalid replay file at {path}!')
+        self.file.close()
 
     def read(self, offset, size):
         self.file.seek(offset)
