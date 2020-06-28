@@ -12,7 +12,7 @@
 ![Main Screenshot](https://github.com/preyneyv/league-vcs/raw/master/images/patch-list.png)
 
 
-**NOTE:** Currently in beta, prone to spontaneous explosions. Do not use for any production-level projects. It *should*
+**NOTE:** Currently in beta, prone to spontaneous combustion. Do not use for any production-level projects. It *should*
 work but that doesn't mean it *will*.
 
 ### Features
