@@ -19,7 +19,7 @@ work but that doesn't mean it *will*.
 
 - Easy-to-use replay watching from any previous League of Legends patch.
   - Detects the patch version from the `.rofl` file. 
-- Automatic store backups of old League of Legends versions.
+- Automatically store backups of old League of Legends versions.
   - Only stores the changed files to make better use of limited storage.
 
 ### Supported Platforms
