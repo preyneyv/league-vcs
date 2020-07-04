@@ -25,6 +25,8 @@ work but that doesn't mean it *will*.
 ### Supported Platforms
 League VCS only supports 64-bit Windows, and I don't have any plans to add 32-bit Windows or macOS support.
 
+Only Windows 10 has been tested, but it _should_ work with Windows 7/8 too.
+
 Check out the [Wiki](https://github.com/preyneyv/league-vcs/wiki) for setup and usage instructions.
 
 ---
